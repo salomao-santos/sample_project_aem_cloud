@@ -1,0 +1,5 @@
+{
+  "resource.resolver.mapping": [
+    "/content/sample_project_aem_cloud/</", "/:/"
+  ]
+}

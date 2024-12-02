@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:adobeTargetExportFormat="html"
+    cq:allowedTemplates="[/conf/sample_project_aem_cloud/settings/wcm/templates/(?!page-).*]"
+    cq:conf="/conf/sample_project_aem_cloud"
+    jcr:primaryType="sling:OrderedFolder"
+    jcr:title="Sample Project AEM Cloud Fragments"
+    sling:configRef="/conf/sample_project_aem_cloud">
+    <us/>
+</jcr:root>

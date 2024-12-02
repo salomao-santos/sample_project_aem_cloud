@@ -1,0 +1,8 @@
+{
+  "org.apache.sling.commons.log.names": [
+    "com.sample_project_aem_cloud"
+  ],
+  "org.apache.sling.commons.log.level": "INFO",
+  "org.apache.sling.commons.log.file": "logs/error.log",
+  "org.apache.sling.commons.log.additiv": "false"
+}
