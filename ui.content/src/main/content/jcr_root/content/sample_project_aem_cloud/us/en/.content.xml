@@ -72,10 +72,6 @@
                                 width="4"/>
                         </cq:responsive>
                     </teaser_copy_1579324932>
-                    <helloworld
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="sample_project_aem_cloud/components/helloworld"
-                        text="lalala :)"/>
                 </container>
             </container>
         </root>
