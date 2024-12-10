@@ -1,5 +1,17 @@
 <div data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
      data-sly-test.hasContent="${properties.title}">
       <h1 data-sly-test="${properties.title}">${properties.title}</h1>
+      <p data-sly-test="${properties.productType}">${properties.productType}</p>
+      <p data-sly-test="${properties.os}">${properties.os}</p>
+      <p data-sly-test="${properties.camera}">${properties.camera}</p>
+      
+      <p data-sly-test="${properties.screenSize}">${properties.screenSize}</p>
+      
+      <p data-sly-test="${properties.keyboardLayout}">${properties.keyboardLayout}</p>
+      
+      <p data-sly-test="${properties.hdr}">${properties.hdr}</p>
+
+      <p data-sly-test="${properties.resolution}">${properties.resolution}</p>
+      
 </div> 
 <sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent}"></sly>
