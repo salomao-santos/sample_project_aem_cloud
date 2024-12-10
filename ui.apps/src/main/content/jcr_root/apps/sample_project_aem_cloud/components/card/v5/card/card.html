@@ -1,0 +1,5 @@
+<div data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${properties.title}">
+      <h1 data-sly-test="${properties.title}">${properties.title}</h1>
+</div> 
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent}"></sly>
