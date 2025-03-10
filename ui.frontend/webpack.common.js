@@ -1,5 +1,4 @@
-'use strict';
-
+const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TSConfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
@@ -89,6 +88,10 @@ module.exports = {
             patterns: [
                 { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './clientlib-site/' }
             ]
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
         })
     ],
     stats: {
