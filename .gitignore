@@ -106,3 +106,7 @@ reports/
 dispatcher/src/conf.d/variables/default.vars
 ui.tests.wdio/test-module/assets/form/themes/**/*diff.png
 ui.tests.wdio/test-module/assets/form/themes/**/*current.png
+
+ui.frontend/.env
+ui.frontend/.env.development
+ui.frontend/.env.production
