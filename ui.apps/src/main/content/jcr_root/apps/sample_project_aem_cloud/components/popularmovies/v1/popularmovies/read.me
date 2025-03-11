@@ -1,0 +1,25 @@
+# Componente Popular Movies
+
+O componente **Popular Movies** foi desenvolvido para exibir uma lista de filmes populares utilizando a API do The Movie Database (TMDb). Este componente foi implementado no módulo `ui.frontend` do AEM e utiliza jQuery para realizar requisições AJAX e renderizar os dados recebidos.
+
+## Funcionalidades Desenvolvidas
+
+### Estrutura HTML do Componente
+- O componente possui uma estrutura HTML que inclui um contêiner para exibir os filmes populares.
+
+### Requisição AJAX
+- Utiliza jQuery para realizar uma requisição AJAX à API do TMDb e obter a lista de filmes populares.
+- A URL da API e os parâmetros de requisição são configurados na função `requestPopularMovies`.
+
+### Template de Cartão de Filme
+- A função `popularMovieCardTemplate` é responsável por gerar o HTML para cada filme, incluindo a imagem do pôster, título e descrição do filme.
+
+### Exibição dos Filmes
+- A função `showPopularMovies` itera sobre a lista de filmes recebida da API e utiliza o template de cartão de filme para renderizar cada filme no contêiner do componente.
+
+### Tratamento de Erros
+- A função `requestPopularMovies` inclui tratamento de erros para exibir uma mensagem de erro caso a requisição AJAX falhe.
+
+### Configuração de Variáveis de Ambiente
+- Utiliza o pacote `dotenv` para gerenciar variáveis de ambiente, incluindo a chave da API (`API_KEY`).
+- A configuração do Webpack foi ajustada para carregar as variáveis de ambiente corretas com base no ambiente (desenvolvimento ou produção).
