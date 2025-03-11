@@ -19,9 +19,6 @@ $(function() {
                     </div>
                     <div class="cmp-teaser__content">
                         <h2 class="cmp-teaser__title">${movie.title}</h2>
-                        <div class="cmp-teaser__description">
-                            <p>${movie.overview}</p>
-                        </div>
                     </div>
                     
                 </div>
