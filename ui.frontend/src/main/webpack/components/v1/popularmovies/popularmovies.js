@@ -2,7 +2,7 @@ $(function() {
     const API_KEY = process.env.API_KEY;
   
 
-    var popularMovies = $(".popular-movies-v1 .aem-Grid");
+    var popularMovies = $(".popular-movies-list-v1 .aem-Grid");
 
     if (!popularMovies.length) {
         return;

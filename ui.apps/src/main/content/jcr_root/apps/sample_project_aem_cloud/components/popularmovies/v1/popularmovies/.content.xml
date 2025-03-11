@@ -4,6 +4,6 @@
     jcr:title="Popular Movies - V1"
     componentGroup="Sample Project AEM Cloud - Content">
 
-    <cq:htmlTag jcr:primaryType="nt:unstructured" class="popular-movies-v1"></cq:htmlTag>
+    <cq:htmlTag jcr:primaryType="nt:unstructured" class="popular-movies-list-v1"></cq:htmlTag>
      
 </jcr:root>
