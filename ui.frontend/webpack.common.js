@@ -1,5 +1,4 @@
-'use strict';
-
+const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TSConfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
@@ -16,95 +15,106 @@ const resolve = {
     })]
 };
 
-module.exports = {
-    resolve: resolve,
-    entry: {
-        site: SOURCE_ROOT + '/site/main.ts'
-    },
-    output: {
-        filename: (chunkData) => {
-            return chunkData.chunk.name === 'dependencies' ? 'clientlib-dependencies/[name].js' : 'clientlib-site/[name].js';
+module.exports = (env) => {
+    const dotenv = require('dotenv').config({ path: __dirname + `/.env.${env}` });
+
+    return {
+        resolve: resolve,
+        entry: {
+            site: SOURCE_ROOT + '/site/main.ts'
         },
-        path: path.resolve(__dirname, 'dist')
-    },
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'ts-loader'
-                    },
-                    {
-                        loader: 'glob-import-loader',
-                        options: {
-                            resolve: resolve
-                        }
-                    }
-                ]
+        output: {
+            filename: (chunkData) => {
+                return chunkData.chunk.name === 'dependencies' ? 'clientlib-dependencies/[name].js' : 'clientlib-site/[name].js';
             },
-            {
-                test: /\.scss$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            url: false
-                        }
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins() {
-                                return [
-                                    require('autoprefixer')
-                                ];
+            path: path.resolve(__dirname, 'dist')
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.tsx?$/,
+                    exclude: /node_modules/,
+                    use: [
+                        {
+                            loader: 'ts-loader'
+                        },
+                        {
+                            loader: 'glob-import-loader',
+                            options: {
+                                resolve: resolve
                             }
                         }
-                    },
-                    {
-                        loader: 'sass-loader',
-                    },
-                    {
-                        loader: 'glob-import-loader',
-                        options: {
-                            resolve: resolve
+                    ]
+                },
+                {
+                    test: /\.scss$/,
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                url: false
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                plugins() {
+                                    return [
+                                        require('autoprefixer')
+                                    ];
+                                }
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                        },
+                        {
+                            loader: 'glob-import-loader',
+                            options: {
+                                resolve: resolve
+                            }
                         }
-                    }
-                ]
-            }
-        ]
-    },
-    plugins: [
-        new CleanWebpackPlugin(),
-        new ESLintPlugin({
-            extensions: ['js', 'ts', 'tsx']
-        }),
-        new MiniCssExtractPlugin({
-            filename: 'clientlib-[name]/[name].css'
-        }),
-        new CopyWebpackPlugin({
-            patterns: [
-                { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './clientlib-site/' }
+                    ]
+                }
             ]
-        })
-    ],
-    stats: {
-        assetsSort: 'chunks',
-        builtAt: true,
-        children: false,
-        chunkGroups: true,
-        chunkOrigins: true,
-        colors: false,
-        errors: true,
-        errorDetails: true,
-        env: true,
-        modules: false,
-        performance: true,
-        providedExports: false,
-        source: false,
-        warnings: true
-    }
+        },
+        plugins: [
+            new CleanWebpackPlugin(),
+            new ESLintPlugin({
+                extensions: ['js', 'ts', 'tsx']
+            }),
+            new MiniCssExtractPlugin({
+                filename: 'clientlib-[name]/[name].css'
+            }),
+            new CopyWebpackPlugin({
+                patterns: [
+                    { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './clientlib-site/' }
+                ]
+            }),
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery'
+            }),
+            new webpack.DefinePlugin({
+                'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
+            })
+        ],
+        stats: {
+            assetsSort: 'chunks',
+            builtAt: true,
+            children: false,
+            chunkGroups: true,
+            chunkOrigins: true,
+            colors: false,
+            errors: true,
+            errorDetails: true,
+            env: true,
+            modules: false,
+            performance: true,
+            providedExports: false,
+            source: false,
+            warnings: true
+        }
+    };
 };
