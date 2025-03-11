@@ -10,8 +10,8 @@
   "main": "src/main/webpack/site/main.ts",
   "license": "SEE LICENSE IN LICENSE.txt",
   "scripts": {
-    "dev": "webpack --env dev --config ./webpack.dev.js && clientlib --verbose",
-    "prod": "webpack --config ./webpack.prod.js && clientlib --verbose",
+    "dev": "webpack --env development --config ./webpack.dev.js && clientlib --verbose",
+    "prod": "webpack --env production --config ./webpack.prod.js && clientlib --verbose",
     "start": "webpack-dev-server --open --config ./webpack.dev.js",
     "sync": "aemsync -d -p ../ui.apps/src/main/content",
     "chokidar": "chokidar -c \"clientlib\" ./dist",
@@ -56,6 +56,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
     "jquery": "^3.7.1"
   },
   "browserslist": [

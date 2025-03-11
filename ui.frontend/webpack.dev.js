@@ -9,7 +9,7 @@ module.exports = env => {
 
     const writeToDisk = env && Boolean(env.writeToDisk);
 
-    return merge(common, {
+    return merge(common('development'), {
         mode: 'development',
         performance: {
             hints: 'warning',
@@ -39,4 +39,4 @@ module.exports = env => {
             }
         }
     });
-}
+};
