@@ -2,7 +2,7 @@ $(function() {
     const API_KEY = process.env.API_KEY;
   
 
-    var popularMovies = $(".popular-movies-v1 .aem-Grid");
+    var popularMovies = $(".popular-movies-list-v1 .aem-Grid");
 
     if (!popularMovies.length) {
         return;
@@ -19,9 +19,6 @@ $(function() {
                     </div>
                     <div class="cmp-teaser__content">
                         <h2 class="cmp-teaser__title">${movie.title}</h2>
-                        <div class="cmp-teaser__description">
-                            <p>${movie.overview}</p>
-                        </div>
                     </div>
                     
                 </div>
