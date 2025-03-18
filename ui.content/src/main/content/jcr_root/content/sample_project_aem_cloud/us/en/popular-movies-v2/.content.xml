@@ -4,14 +4,14 @@
     <jcr:content
         cq:contextHubPath="/etc/cloudsettings/default/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
-        cq:lastModified="{Date}2025-03-18T09:30:56.140-03:00"
+        cq:lastModified="{Date}2025-03-18T09:29:41.121-03:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/sample_project_aem_cloud/settings/wcm/templates/page-content"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Popular Movies V1"
-        jcr:uuid="4e6ea804-9ccb-4bd1-bcf1-50034f6718f7"
+        jcr:title="Popular Movies V2"
+        jcr:uuid="352cc1a7-1adb-40c7-a561-b800827a4d74"
         sling:resourceType="sample_project_aem_cloud/components/page"
         pageTitle="Sample Project AEM Cloud"
         pwaCachestrategy="staleWhileRevalidate"
@@ -32,18 +32,18 @@
                     sling:resourceType="sample_project_aem_cloud/components/container"
                     layout="responsiveGrid">
                     <popularmovies
-                        jcr:created="{Date}2025-03-09T23:25:00.389-03:00"
+                        jcr:created="{Date}2025-03-18T09:27:54.708-03:00"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2025-03-18T09:30:56.139-03:00"
+                        jcr:lastModified="{Date}2025-03-18T09:29:41.119-03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="sample_project_aem_cloud/components/popularmovies/v1/popularmovies"
-                        title="Popular Movies V1"/>
+                        sling:resourceType="sample_project_aem_cloud/components/popularmovies/v2/popularmovies"
+                        title="Popular Movies V2"/>
                 </container>
             </container>
         </root>
         <cq:featuredimage
-            jcr:lastModified="{Date}2025-03-11T08:41:09.126-03:00"
+            jcr:lastModified="{Date}2025-03-18T09:27:21.274-03:00"
             jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="core/wcm/components/image/v3/image"
