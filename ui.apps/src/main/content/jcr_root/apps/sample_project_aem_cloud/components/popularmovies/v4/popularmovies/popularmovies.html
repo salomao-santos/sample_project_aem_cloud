@@ -1,0 +1,11 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${properties.title}">
+    
+        <h2 class="title aem-GridColumn aem-GridColumn--default--12" data-sly-test.title="${properties.title}">${title}</h2>
+        
+        <ul class="cmp-image-list">
+            <!-- Popular Movies List -->
+              
+        </ul>   
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent}"></sly>

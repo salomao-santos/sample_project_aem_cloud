@@ -1,4 +1,4 @@
-package com.sample_project_aem_cloud.core.servlets.v3;
+package com.sample_project_aem_cloud.core.servlets.v4;
 
 import java.io.IOException;
 import java.net.URLEncoder;
@@ -26,7 +26,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Component(service = Servlet.class)
-@SlingServletPaths("/bin/movies/popular/v3")
+@SlingServletPaths("/bin/movies/popular/v4")
 public class PopularMovieServlet extends SlingAllMethodsServlet {
 
     private static final Logger LOG = LoggerFactory.getLogger(PopularMovieServlet.class);

@@ -1,6 +1,6 @@
 $(function() {
     
-    var popularMovies = $(".popular-movies-list-v3 .cmp-image-list");
+    var popularMovies = $(".popular-movies-list-v4 .cmp-image-list");
 
     if (!popularMovies.length) {
         return;
@@ -48,7 +48,7 @@ $(function() {
     }
 
     function init(pagination) {
-        var url = "/bin/movies/popular/v3";
+        var url = "/bin/movies/popular/v4";
         var data = {
             language: "pt-BR",
             page: pagination
