@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2025-03-18T09:51:03.650-03:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/sample_project_aem_cloud/settings/wcm/templates/page-content"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Popular Movies V4"
+        jcr:uuid="98088b43-eea0-4d84-a381-a76503b2df46"
+        sling:resourceType="sample_project_aem_cloud/components/page"
+        pageTitle="Sample Project AEM Cloud"
+        pwaCachestrategy="staleWhileRevalidate"
+        pwaDisplay="standalone"
+        pwaOrientation="any">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="sample_project_aem_cloud/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="sample_project_aem_cloud/components/container">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="sample_project_aem_cloud/components/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="sample_project_aem_cloud/components/container"
+                    layout="responsiveGrid">
+                    <popularmovies
+                        jcr:created="{Date}2025-03-18T09:50:53.576-03:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2025-03-18T09:51:03.648-03:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="sample_project_aem_cloud/components/popularmovies/v4/popularmovies"
+                        title="Popular Movies V4"/>
+                </container>
+            </container>
+        </root>
+        <cq:featuredimage
+            jcr:lastModified="{Date}2025-03-18T09:50:37.012-03:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/wcm/components/image/v3/image"
+            altValueFromDAM="false"/>
+    </jcr:content>
+</jcr:root>
