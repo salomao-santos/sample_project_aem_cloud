@@ -26,7 +26,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Component(service = Servlet.class)
-@SlingServletPaths("/bin/movies/popular")
+@SlingServletPaths("/bin/movies/popular/v3")
 public class PopularMovieServlet extends SlingAllMethodsServlet {
 
     private static final Logger LOG = LoggerFactory.getLogger(PopularMovieServlet.class);
