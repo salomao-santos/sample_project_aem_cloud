@@ -1,0 +1,7 @@
+{
+  "apiBaseUrlPopularMovies": "$[env:API_BASE_URL_POPULAR_MOVIES;default=https://api.themoviedb.org/3/movie/popular]",
+  "apiKeyPopularMovies": "$[secret:API_KEY_POPULAR_MOVIES;default=your_api_key]",
+  "connectionTimeoutMs": "$[env:CONNECTION_TIMEOUT_MS;default=5000]",
+  "responseTimeoutMs": "$[env:RESPONSE_TIMEOUT_MS;default=10000]",
+  "requestTimeoutMs": "$[env:REQUEST_TIMEOUT_MS;default=5000]"
+}
