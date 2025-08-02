@@ -1,0 +1,6 @@
+{
+  "mobile.resourceTypes": [
+    "sample_project_aem_cloud/components/page"
+  ],
+  "README": "Indicate which page resource types should display the mobile emulators."
+}
